@@ -1,4 +1,21 @@
-## Kotlin Script
+## Kotlin Scripting
 
 This repository contains sample scripts demonstrating the features of Kotlin Scripting.
-Refer to the Medium Article for steps on how to set it up.
+
+## Basics
+
+In Kotlin 1.3.70 introduced the ability to run Kotlin scripts from the command line. Just name the file `<*>.main.kts` i.e. suffix the file with `.main.kts` and simply run the file as shown below
+
+```shell
+kotlin my-file.main.kts
+```
+
+A simple script would look like below
+
+```kotlin
+#!/usr/bin/env kotlin 
+
+println("Hello World, from kotlin script")
+```
+
+Refer to the Medium Article for more understanding on Kotlin Scripting.
