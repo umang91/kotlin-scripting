@@ -18,4 +18,4 @@ A simple script would look like below
 println("Hello World, from kotlin script")
 ```
 
-Refer to the Medium Article for more understanding on Kotlin Scripting.
+Refer to the [Medium Article](https://medium.com/@umang91/scripting-in-kotlin-eaf01750bbee) for more understanding on Kotlin Scripting.
