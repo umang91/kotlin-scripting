@@ -22,7 +22,7 @@ fun executeCommandOnShell(command: String) {
  * @param command command to be executed on the shell
  * @return [String] output/result of the command execution in string format.
  */
-fun executeCommandOnShell(command: String): String {
+fun executeShellCommandWithStringOutput(command: String): String {
     val process = ProcessBuilder("/bin/bash", "-c", command).start()
     val reader = BufferedReader(InputStreamReader(process.inputStream))
     var line: String? = ""
@@ -30,5 +30,6 @@ fun executeCommandOnShell(command: String): String {
     while (reader.readLine().also { line = it } != null) {
         builder.append(line).append(System.getProperty("line.separator"))
     }
-    return builder.toString()
+    // remove the extra new line added in the end while reading from the stream
+    return builder.toString().trim()
 }
